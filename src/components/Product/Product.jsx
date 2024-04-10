@@ -10,4 +10,3 @@ export const Product = ({id, name, image}) => {
     </div>
   )
 }
-

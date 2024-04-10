@@ -2,9 +2,11 @@ import './style.css';
 import { Header } from '../../components/Header/header';
 import { useState, useEffect } from 'react';
 import { Product } from '../../components/Product/Product';
+import { useParams, Link } from 'react-router-dom';
 
 export const HomePage = () => {
   const [products, setProducts] = useState([])
+  const {productId} = useParams
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -23,7 +25,6 @@ export const HomePage = () => {
 
   return (
     <div className="container">
-      <Header />
       <main>
         <div className='hero'>
         <h1 className='hero__title'>Aktuální nabídka</h1>
@@ -34,7 +35,11 @@ export const HomePage = () => {
         </div>
         <div className='products'>
           {products && products.map(({id, name, image}) => {
-            return <Product id={id} key={id} name={name} image={image} />
+            return (
+              <Link to="/product" >
+                <Product id={id} key={id} name={name} image={image} />
+              </Link>
+            )
           })}
         </div>
       </main>

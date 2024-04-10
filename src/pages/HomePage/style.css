@@ -22,6 +22,11 @@
   margin: 0 auto;
 }
 
+.products a {
+  text-decoration: none;
+  color: black;
+}
+
 @media screen and (min-width: 600px) {
   .products {
     grid-template-columns: 1fr 1fr;

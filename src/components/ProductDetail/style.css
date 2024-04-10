@@ -1,0 +1,37 @@
+.product-detail {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.product-detail__pic {
+
+}
+
+.product-detail__img {
+
+}
+
+.product-detail__desc {
+
+}
+
+.product-detail__title {
+  font-size: 36px;
+}
+
+.product-detail__button {
+  font-size: 24px;
+  border: none;
+  padding: 20px 30px;
+  color: white;
+  background-color: #404040;
+}
+
+@media screen and (min-width: 600px) {
+  .product-detail {
+    flex-direction: row;
+  }
+}
