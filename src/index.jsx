@@ -1,7 +1,32 @@
 import { createRoot } from 'react-dom/client';
-import { HomePage } from './pages/HomePage';
+import {createBrowserRouter, RouterProvider, Link} from 'react-router-dom';
+import {App} from './components/App/App';
+import {HomePage} from './pages/HomePage/HomePage';
+import {ProductPage} from './pages/ProductPage/ProductPage';
+import {ErrorPage} from './pages/ErrorPage/ErrorPage'
 import './global.css';
 
-createRoot(
-  document.querySelector('#app'),
-).render(<HomePage />);
+// createRoot(
+//   document.querySelector('#app'),
+// ).render(<HomePage />);
+
+
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <App />,
+		errorElement: <ErrorPage />,
+		children: [
+			{
+				path: '/',
+				element: <HomePage />,
+			},
+			{
+				path: '/product/:id',
+				element: <ProductPage />,
+			},
+		],
+	},
+])
+
+createRoot(document.querySelector('#app')).render(<RouterProvider router={router} />)
