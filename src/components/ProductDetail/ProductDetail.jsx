@@ -1,6 +1,9 @@
 import './style.css'
+import { useParams } from 'react-router-dom'
 
 export const ProductDetail = () => {
+  const {productId} = useParams()
+  
   return (
     <div className='product-detail'>
       <picture className='product-detail__pic'>

@@ -6,10 +6,6 @@ import {ProductPage} from './pages/ProductPage/ProductPage';
 import {ErrorPage} from './pages/ErrorPage/ErrorPage'
 import './global.css';
 
-// createRoot(
-//   document.querySelector('#app'),
-// ).render(<HomePage />);
-
 
 const router = createBrowserRouter([
 	{
