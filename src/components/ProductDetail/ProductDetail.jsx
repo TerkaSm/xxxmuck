@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 export const ProductDetail = () => {
   const [products, setProducts] = useState([]);
   const {productId} = useParams()
-  const product = products.find(item => item.id === productId);
+  const product = products.find((item) => item.id === productId);
   console.log(product)
 
   useEffect(() => {
@@ -26,13 +26,17 @@ export const ProductDetail = () => {
 
   return (
     <div className='product-detail'>
-      <picture className='product-detail__pic'>
-        {/* <img className='product-detail__img' src={product.image} alt={product.name} /> */}
-      </picture>
-      <div className='product-detail__desc'>
-        {/* <p className='product-detail__title'>{product.name}</p> */}
-        <button className='product-detail__button'>Objednat</button>
-      </div>
+      {products && (
+        <>
+          <picture className='product-detail__pic'>
+            <img className='product-detail__img' src={product.image} alt={product.name} />
+          </picture>
+          <div className='product-detail__desc'>
+            <p className='product-detail__title'>{product.name}</p>
+            <button className='product-detail__button'>Objednat</button>
+          </div>
+        </>
+      )}
     </div>
   )
 }
