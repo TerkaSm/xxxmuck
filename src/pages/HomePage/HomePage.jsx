@@ -1,7 +1,7 @@
 import './style.css';
 import { useState, useEffect } from 'react';
 import { Product } from '../../components/Product/Product';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const HomePage = () => {
   const [products, setProducts] = useState([]);

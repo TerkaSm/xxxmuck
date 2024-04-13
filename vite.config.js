@@ -12,4 +12,5 @@ export default defineConfig({
     modulePreload: false,
   },
   plugins: [react()],
+  base: "/xxxmuck",
 });

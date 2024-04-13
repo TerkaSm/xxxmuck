@@ -20,9 +20,12 @@ const router = createBrowserRouter([
 			{
 				path: '/product/:productId',
 				element: <ProductPage />,
-			},
+			},		
 		],
 	},
-])
+],{
+	basename: "/xxxmuck"
+},	
+)
 
 createRoot(document.querySelector('#app')).render(<RouterProvider router={router} />)
