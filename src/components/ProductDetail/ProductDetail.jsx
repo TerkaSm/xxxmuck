@@ -19,14 +19,14 @@ export const ProductDetail = () => {
     fetchProducts()
   }, []);
 
-  if (products === null) {
+  if (product === null) {
     return <div>Načítám...</div>;
   }
 
 
   return (
     <div className='product-detail'>
-      {products && (
+      {product && (
         <>
           <picture className='product-detail__pic'>
             <img className='product-detail__img' src={product.image} alt={product.name} />

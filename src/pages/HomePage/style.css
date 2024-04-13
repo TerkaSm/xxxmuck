@@ -17,9 +17,10 @@
 .products {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: clamp(20px, 12vw, 45px);
   max-width: 1140px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .products a {

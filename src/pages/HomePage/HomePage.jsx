@@ -1,5 +1,4 @@
 import './style.css';
-import { Header } from '../../components/Header/Header';
 import { useState, useEffect } from 'react';
 import { Product } from '../../components/Product/Product';
 import { useParams, Link } from 'react-router-dom';
@@ -39,8 +38,8 @@ export const HomePage = () => {
           {products &&
             products.map(({ id, name, image }) => {
               return (
-                <Link to={`/product/${id}`}>
-                  <Product id={id} key={id} name={name} image={image} />
+                <Link to={`/product/${id}`} key={id}>
+                  <Product id={id} name={name} image={image} />
                 </Link>
               );
             })}

@@ -1,31 +1,25 @@
 .product-detail {
   max-width: 1140px;
-  margin: 0 auto;
+  margin: 75px auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
 }
 
-.product-detail__pic {
-
-}
 
 .product-detail__img {
-
-}
-
-.product-detail__desc {
-
+  max-width: 100%;
 }
 
 .product-detail__title {
-  font-size: 36px;
+  font-size: 34px;
 }
 
 .product-detail__button {
   font-size: 24px;
   border: none;
-  padding: 20px 30px;
+  padding: 18px 32px;
   color: white;
   background-color: #404040;
 }
